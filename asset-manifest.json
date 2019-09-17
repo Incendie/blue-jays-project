@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/blue-jays-project/static/css/main.2cce8147.chunk.css",
+    "main.js": "/blue-jays-project/static/js/main.ad8e1190.chunk.js",
+    "main.js.map": "/blue-jays-project/static/js/main.ad8e1190.chunk.js.map",
+    "runtime~main.js": "/blue-jays-project/static/js/runtime~main.215e449a.js",
+    "runtime~main.js.map": "/blue-jays-project/static/js/runtime~main.215e449a.js.map",
+    "static/js/2.1436106e.chunk.js": "/blue-jays-project/static/js/2.1436106e.chunk.js",
+    "static/js/2.1436106e.chunk.js.map": "/blue-jays-project/static/js/2.1436106e.chunk.js.map",
+    "index.html": "/blue-jays-project/index.html",
+    "precache-manifest.74ac63abeb43566d359bee81d57eb04b.js": "/blue-jays-project/precache-manifest.74ac63abeb43566d359bee81d57eb04b.js",
+    "service-worker.js": "/blue-jays-project/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/blue-jays-project/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/blue-jays-project/static/media/logo.5d5d9eef.svg"
+  }
+}
