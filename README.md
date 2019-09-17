@@ -1,3 +1,22 @@
+# Scouting Report Entry Application
+
+Task: Build a web application for entering and retrieving basic scouting reports on players
+
+Features your application should include:
+
+    A form (or forms) which allows the user to enter the following scouting report items:
+        Player Name, Position and Team
+        Scouting Report text
+        Player Overall Future Value from 20-80
+        For Position Players: Tool grades (20-80) for Hitting, Power, Running, Fielding and Throwing
+        For Pitchers: Pitch grades (20-80) and velocity for each pitch type the pitcher throws
+    A way of browsing and viewing saved scouting reports
+    The report data should be stored to a SQLite or similar database
+
+For information in the 20-80 scouting scale see https://blogs.fangraphs.com/scouting-explained-the-20-80-scouting-scale/
+
+For some sample scouting reports see the MLB Pipeline Top Prospects list: http://m.mlb.com/prospects/2019
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
