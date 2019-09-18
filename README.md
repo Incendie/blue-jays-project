@@ -1,21 +1,14 @@
-# Scouting Report Entry Application
+# Team and Player Stats Application
 
-Task: Build a web application for entering and retrieving basic scouting reports on players
+Task: Build a web application which displays MLB team rosters and player statistics.
 
 Features your application should include:
 
-    A form (or forms) which allows the user to enter the following scouting report items:
-        Player Name, Position and Team
-        Scouting Report text
-        Player Overall Future Value from 20-80
-        For Position Players: Tool grades (20-80) for Hitting, Power, Running, Fielding and Throwing
-        For Pitchers: Pitch grades (20-80) and velocity for each pitch type the pitcher throws
-    A way of browsing and viewing saved scouting reports
-    The report data should be stored to a SQLite or similar database
+    A page/view listing all MLB teams
+    A page/view for each team showing the players on their roster
+    A page/view for each player displaying some biographical information (name, age, height, weight, etc.) and tables of the player’s seasonal batting and/or pitching statistics
 
-For information in the 20-80 scouting scale see https://blogs.fangraphs.com/scouting-explained-the-20-80-scouting-scale/
-
-For some sample scouting reports see the MLB Pipeline Top Prospects list: http://m.mlb.com/prospects/2019
+The data required for the application can be retrieved from the MLB StatsAPI (see the Resources section below). You may choose to build your application directly on the StatsAPI or download the data to a local database or filesystem if you prefer.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
