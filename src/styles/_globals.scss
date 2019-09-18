@@ -1,0 +1,200 @@
+// Begin global styling initialization
+
+html {
+  font-size: $fontSize;
+}
+
+body {
+  font-family: $contentFont;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headingFont;
+  color: black;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-transform: none;
+  color: white;
+  font-size: 7.8rem;
+  font-weight: 800;
+  letter-spacing: 0.78px;
+  max-width: 500px;
+  max-height: 150px;
+  line-height: 1.03;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $fontColour;
+  padding-top: 30px;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: $fontColour;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 2rem auto;
+  line-height: 2.8rem;
+}
+
+header {
+  max-width: 100vw;
+  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background: none;
+}
+
+button,
+button:focus,
+button:active,
+.filterButton,
+.filterButton:focus,
+.filterButton:active {
+  border: none;
+  background: $primaryColour;
+  outline: none;
+  padding: 0;
+}
+
+$buttonSize: 50px;
+
+button,
+.filterButton {
+  width: $buttonSize * 2.5;
+  height: $buttonSize;
+  position: relative;
+  z-index: 2;
+  color: white;
+  margin: 0 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  font-weight: 900;
+
+  &:before,
+  &:after {
+    height: $buttonSize;
+    width: $buttonSize;
+    content: "";
+    background: $primaryColour;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &:before {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    left: -$buttonSize/2;
+  }
+
+  &:after {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    right: -$buttonSize/2;
+  }
+
+  &:hover,
+  &:active {
+    color: $primaryColour;
+    background-color: $bgColour;
+    border-top: 1px solid $primaryColour;
+    border-bottom: 1px solid $primaryColour;
+    height: $buttonSize;
+
+    &:before,
+    &:after {
+      background-color: $bgColour;
+      border-top: 1px solid $primaryColour;
+      border-bottom: 1px solid $primaryColour;
+      top: -1px;
+    }
+
+    &:before {
+      border-left: 1px solid $primaryColour;
+    }
+
+    &:after {
+      border-right: 1px solid $primaryColour;
+    }
+  }
+
+  &:active {
+    border-style: none;
+  }
+}
+
+.button {
+  font-size: 1.0rem;
+  margin: 0 $buttonSize;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width : 1440px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width : 1024px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .wrapper {
+    max-width: 448px;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .wrapper {
+    max-width: 300px;
+  }
+}

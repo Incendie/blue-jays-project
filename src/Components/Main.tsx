@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Provider } from 'react-redux';
 import store from '../store';
-import Teams from './Teams';
+import Teams from './Teams/Teams';
 
 import { filterSubmitted } from '../Actions/filterActions';
 
