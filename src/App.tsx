@@ -1,15 +1,18 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-import { Provider } from "react-redux";
-import store from "./store";
+import { Provider } from 'react-redux';
+import store from './store';
 
-import Teams from "./Components/Teams";
+import Main from './Components/Main';
 
-const App: React.FC = () => {
+const App: React.FC<any> = () => {
   return (
     <Provider store={store}>
-      <Teams />
+      <h1>Welcome!</h1>
+      <p>What are you looking for today?</p>
+
+      <Main />
     </Provider>
   );
 };

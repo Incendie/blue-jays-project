@@ -1,12 +1,6 @@
-export function filterSelected(title: string, target: any) {
+export function filterSubmitted(target: string) {
   return {
-    type:
-      title.toUpperCase() +
-      "_FILTER_" +
-      (target.checked ? "" : "DE") +
-      "SELECTED",
-    payload: {
-      filterName: target.name.toLowerCase()
-    }
+    type: 'FILTER_SUBMITTED',
+    payload: { target }
   };
 }
