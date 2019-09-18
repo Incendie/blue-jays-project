@@ -1,11 +1,10 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import fetchReducer from "./fetchReducer";
-import filterReducer from "./filterReducer";
+import fetchReducer from './fetchReducer';
+import filterReducer from './filterReducer';
 
 const reducer = combineReducers({
-  fetch: fetchReducer,
-  filters: filterReducer
+  fetch: fetchReducer
 });
 
 export type AppState = ReturnType<typeof reducer>;

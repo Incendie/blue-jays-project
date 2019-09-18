@@ -1,26 +1,13 @@
-import axios from "axios";
-
 export function fetchTeams() {
   return function(dispatch: any) {
-    axios({
-      method: "GET",
-      params: {
-        sportId: 1
-      },
-      baseURL: "https://statsapi.mlb.com/api/v1/team",
-      headers: {
-        "Access-Control-Allow-Headers":
-          "Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Content-Type": "application/json"
-      }
+    fetch('https://statsapi.mlb.com/api/v1/teams?sportId=1', {
+      method: 'GET'
     })
       .then(response => {
-        dispatch({ type: "FETCH_TEAMS_FULFILLED", payload: response.data });
+        dispatch({ type: 'FETCH_TEAMS', payload: response.json() });
       })
       .catch(err => {
-        dispatch({ type: "FETCH_TEAMS_REJECTED", payload: err });
+        dispatch({ type: 'FETCH_TEAMS', payload: err });
       });
   };
 }

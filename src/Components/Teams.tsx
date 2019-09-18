@@ -1,26 +1,28 @@
-import React from "react";
-import { fetchTeams } from "../Actions/fetchActions";
+import React from 'react';
+import { fetchTeams } from '../Actions/fetchActions';
 
-const { connect } = require("react-redux");
+const { connect } = require('react-redux');
 @connect((store: any) => {
   return {
-    teams: store.teams
+    fetch: store.fetch.payload
   };
 })
 export default class Inspirations extends React.Component<any> {
   componentDidMount() {
-    fetch("https://statsapi.mlb.com/api/v1/teams?sportId=1").then(function(
-      response
-    ) {
-      console.log(response);
-    });
     this.props.dispatch(fetchTeams());
   }
 
   public render() {
+    let teamNames;
+    if (this.props.fetch.teams) {
+      teamNames = this.props.fetch.teams.map((team: any) => {
+        return <li key={team.id}>{team.name}</li>;
+      });
+    }
+
     return (
       <div id="teams" className="wrapper">
-        Henlo
+        <ul>{teamNames ? teamNames : 'Henlo'}</ul>
       </div>
     );
   }
