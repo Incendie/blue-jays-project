@@ -48,7 +48,10 @@ class Player extends React.Component<any> {
                 ", " +
                 player.primaryPosition.name}
             </p>
-            <p>{"Drafted: " + player.draftYear}</p>
+            <p>
+              {"Drafted: " +
+                (player.draftYear ? player.draftYear : "Not Drafted")}
+            </p>
             <p>{"Bats: " + player.batSide.description}</p>
             <p>{"Throws: " + player.pitchHand.description}</p>
           </div>
