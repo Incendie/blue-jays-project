@@ -2,6 +2,8 @@ import React from "react";
 
 import { fetchTeam } from "../../Actions/fetchActions";
 
+import Roster from "./Roster";
+
 const { connect } = require("react-redux");
 @connect((store: any) => {
   return {
@@ -31,6 +33,7 @@ class Team extends React.Component<any> {
               />
             </div>
           </div>
+          <Roster />
         </section>
       );
     } else {

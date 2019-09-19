@@ -25,3 +25,20 @@ export function fetchTeam(teamid: number) {
       });
   };
 }
+
+export function fetchRoster(teamid: number) {
+  return function(dispatch: any) {
+    fetch("https://statsapi.mlb.com/api/v1/teams/" + teamid + "/roster", {
+      method: "GET"
+    })
+      .then(response => {
+        dispatch({
+          type: "FETCH_SELECTED_TEAM_ROSTER",
+          payload: response.json()
+        });
+      })
+      .catch(err => {
+        dispatch({ type: "FETCH_SELECTED_TEAM_ROSTER", payload: err });
+      });
+  };
+}
