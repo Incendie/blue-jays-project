@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Teams from './Teams/Teams';
+import Teams from "./Teams/Teams";
 
-import { filterSubmitted } from '../Actions/filterActions';
+import { filterSubmitted } from "../Actions/filterActions";
 
-const { connect } = require('react-redux');
+const { connect } = require("react-redux");
 
 interface Props {
   [key: string]: any;
@@ -21,7 +21,7 @@ export default class Main extends React.Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      search: ''
+      search: ""
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);

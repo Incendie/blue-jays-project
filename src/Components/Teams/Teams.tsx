@@ -1,8 +1,10 @@
-import React from 'react';
-import { fetchTeams } from '../../Actions/fetchActions';
-import './styles.scss';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const { connect } = require('react-redux');
+import { fetchTeams } from "../../Actions/fetchActions";
+import "./styles.scss";
+
+const { connect } = require("react-redux");
 @connect((store: any) => {
   return {
     fetch: store.fetch.payload,
@@ -27,12 +29,14 @@ export default class Teams extends React.Component<any> {
           return (
             <li className="teamList" key={team.id}>
               <div className="teamList__logo">
-                <img
-                  src={
-                    'https://www.mlbstatic.com/team-logos/' + team.id + '.svg'
-                  }
-                  alt=""
-                />
+                <Link to={"/team/" + team.id}>
+                  <img
+                    src={
+                      "https://www.mlbstatic.com/team-logos/" + team.id + ".svg"
+                    }
+                    alt=""
+                  />
+                </Link>
               </div>
               <p className="teamList__name">{team.name}</p>
             </li>
@@ -45,7 +49,7 @@ export default class Teams extends React.Component<any> {
 
     return (
       <div id="teams" className="wrapper">
-        <ul>{teamNames ? teamNames : 'Loading Teams'}</ul>
+        <ul>{teamNames ? teamNames : "Loading Teams"}</ul>
       </div>
     );
   }
