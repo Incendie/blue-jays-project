@@ -21,7 +21,6 @@ export default class Teams extends React.Component<any> {
       toFilter = this.props.filtered;
     if (this.props.fetch.teams) {
       teamNames = this.props.fetch.teams.map((team: any) => {
-        console.log(toFilter.target);
         if (
           team.name.toLowerCase().includes(toFilter.target) ||
           !toFilter.target

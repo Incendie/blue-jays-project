@@ -11,7 +11,7 @@ const { connect } = require("react-redux");
 })
 class Roster extends React.Component<any> {
   componentDidMount() {
-    this.props.dispatch(fetchRoster(this.props.team[0].id));
+    this.props.dispatch(fetchRoster(this.props.teamid));
   }
 
   render() {

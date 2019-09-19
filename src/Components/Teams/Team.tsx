@@ -33,7 +33,7 @@ class Team extends React.Component<any> {
               />
             </div>
           </div>
-          <Roster />
+          <Roster teamid={this.props.match.params.teamid} />
         </section>
       );
     } else {
