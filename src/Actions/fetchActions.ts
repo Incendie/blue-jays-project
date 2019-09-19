@@ -42,3 +42,20 @@ export function fetchRoster(teamid: number) {
       });
   };
 }
+
+export function fetchPlayer(playerid: number) {
+  return function(dispatch: any) {
+    fetch("https://statsapi.mlb.com/api/v1/people/" + playerid, {
+      method: "GET"
+    })
+      .then(response => {
+        dispatch({
+          type: "FETCH_PLAYER",
+          payload: response.json()
+        });
+      })
+      .catch(err => {
+        dispatch({ type: "FETCH_PLAYER", payload: err });
+      });
+  };
+}

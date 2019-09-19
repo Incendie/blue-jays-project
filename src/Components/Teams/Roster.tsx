@@ -5,7 +5,6 @@ import { fetchRoster } from "../../Actions/fetchActions";
 const { connect } = require("react-redux");
 @connect((store: any) => {
   return {
-    team: store.fetch.payload.teams,
     roster: store.fetch.roster.roster
   };
 })

@@ -39,6 +39,8 @@ export default class Main extends React.Component<Props, State> {
   public render() {
     return (
       <main>
+        <h1>Welcome!</h1>
+        <p>What are you looking for today?</p>
         <form onSubmit={this.onSubmit} action="submit">
           <input type="text" onChange={this.onChange} />
           <button type="button" onClick={this.onSubmit}>

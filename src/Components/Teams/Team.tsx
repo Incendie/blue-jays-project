@@ -20,13 +20,24 @@ class Team extends React.Component<any> {
       const teamData = this.props.team[0];
       return (
         <section>
-          <div className="teamInfo">
-            <p className="teamName">{teamData.name}</p>
-            <div className="teamLogo">
+          <div className="team__info">
+            <p className="team__name">{teamData.name}</p>
+            <div className="team__logo">
               <img
                 src={
                   "https://www.mlbstatic.com/team-logos/" +
                   this.props.match.params.teamid +
+                  ".svg"
+                }
+                alt=""
+              />
+            </div>
+            <div className="team__park">
+              {console.log(teamData)}
+              <img
+                src={
+                  "https://prod-gameday.mlbstatic.com/responsive-gameday-assets/1.2.0/images/fields/" +
+                  teamData.venue.id +
                   ".svg"
                 }
                 alt=""

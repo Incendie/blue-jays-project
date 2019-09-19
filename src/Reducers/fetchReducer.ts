@@ -2,7 +2,8 @@ const initialState = {
     fetching: false,
     fetched: false,
     payload: [],
-    roster: []
+    roster: [],
+    player: []
   },
   fetchReducer = (state = initialState, action: any) => {
     switch (action.type) {
@@ -32,6 +33,15 @@ const initialState = {
           roster: action.payload
         };
       case "FETCH_SELECTED_TEAM_ROSTER_PENDING":
+        return { ...state, fetched: false, fetching: true };
+      case "FETCH_PLAYER_FULFILLED":
+        return {
+          ...state,
+          fetched: true,
+          fetching: false,
+          player: action.payload
+        };
+      case "FETCH_PLAYER_PENDING":
         return { ...state, fetched: false, fetching: true };
       default:
         return state;
