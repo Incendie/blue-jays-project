@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { fetchRoster } from "../../Actions/fetchActions";
 
@@ -18,7 +19,9 @@ class Roster extends React.Component<any> {
       const teamRoster = this.props.roster.map((player: any) => {
         return (
           <li key={player.parentTeamId + "_" + player.jerseyNumber}>
-            {player.person.fullName}
+            <Link to={"/player/" + player.person.id}>
+              {player.person.fullName}
+            </Link>
           </li>
         );
       });
