@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { fetchTeam } from "../../Actions/fetchActions";
+import { fetchTeam } from '../../Actions/fetchActions';
 
-import Roster from "./Roster";
+import Roster from './Roster';
 
-const { connect } = require("react-redux");
+const { connect } = require('react-redux');
 @connect((store: any) => {
   return {
     team: store.fetch.payload.teams
@@ -25,20 +25,19 @@ class Team extends React.Component<any> {
             <div className="team__logo">
               <img
                 src={
-                  "https://www.mlbstatic.com/team-logos/" +
+                  'https://www.mlbstatic.com/team-logos/' +
                   this.props.match.params.teamid +
-                  ".svg"
+                  '.svg'
                 }
                 alt=""
               />
             </div>
             <div className="team__park">
-              {console.log(teamData)}
               <img
                 src={
-                  "https://prod-gameday.mlbstatic.com/responsive-gameday-assets/1.2.0/images/fields/" +
+                  'https://prod-gameday.mlbstatic.com/responsive-gameday-assets/1.2.0/images/fields/' +
                   teamData.venue.id +
-                  ".svg"
+                  '.svg'
                 }
                 alt=""
               />
