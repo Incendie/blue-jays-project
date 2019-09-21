@@ -38,7 +38,7 @@ export default class Main extends React.Component<Props, State> {
 
   public render() {
     return (
-      <main>
+      <div>
         <h1>Welcome!</h1>
         <p>What are you looking for today?</p>
         <form onSubmit={this.onSubmit} action="submit">
@@ -48,7 +48,7 @@ export default class Main extends React.Component<Props, State> {
           </button>
         </form>
         <Teams />
-      </main>
+      </div>
     );
   }
 }

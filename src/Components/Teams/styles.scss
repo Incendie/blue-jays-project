@@ -9,3 +9,10 @@
 .team__park {
   width: 400px;
 }
+
+.pitcher__headings,
+.player__stats--year {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  height: auto;
+}

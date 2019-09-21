@@ -12,11 +12,13 @@ import Player from "./Components/Players/Player";
 const App: React.FC<any> = () => {
   return (
     <Provider store={store}>
-      <Router>
-        <Route exact path="/" component={Main} />
-        <Route path="/team/:teamid" component={Team} />
-        <Route path="/player/:playerid" component={Player} />
-      </Router>
+      <main className="wrapper">
+        <Router>
+          <Route exact path="/" component={Main} />
+          <Route path="/team/:teamid" component={Team} />
+          <Route path="/player/:playerid" component={Player} />
+        </Router>
+      </main>
     </Provider>
   );
 };
