@@ -7,7 +7,7 @@ const RosterStats: React.FC<any> = (props: any) => {
         <ul key={"stats__" + player.id}>
           {stat.splits.map((split: any) => {
             if (split.team) {
-              console.log(split);
+              console.log(props.playerType, split);
               if (props.playerType === "pitcher") {
                 return (
                   <li key={split.season + "__" + split.team.id}>
@@ -80,51 +80,36 @@ const RosterStats: React.FC<any> = (props: any) => {
                   <li key={split.season + "__" + split.team.id}>
                     <ul className={split.season + "stats player__stats--year"}>
                       <li className="gamesPlayed">{split.stat.gamesPlayed}</li>
-                      <li className="groundOuts">{split.stat.groundOuts}</li>
-                      <li className="airOuts">{split.stat.airOuts}</li>
-                      <li className="runs">{split.stat.runs}</li>
-                      <li className="doubles">{split.stat.doubles}</li>
-                      <li className="triples">{split.stat.triples}</li>
-                      <li className="homeRuns">{split.stat.homeRuns}</li>
-                      <li className="strikeOuts">{split.stat.strikeOuts}</li>
-                      <li className="baseOnBalls">{split.stat.baseOnBalls}</li>
-                      <li className="intentionalWalks">
-                        {split.stat.intentionalWalks}
-                      </li>
-                      <li className="hits">{split.stat.hits}</li>
-                      <li className="hitByPitch">{split.stat.hitByPitch}</li>
-                      <li className="avg">{split.stat.avg}</li>
-                      <li className="atBats">{split.stat.atBats}</li>
-                      <li className="obp">{split.stat.obp}</li>
-                      <li className="slg">{split.stat.slg}</li>
-                      <li className="caughtStealing">
-                        {split.stat.caughtStealing}
-                      </li>
-                      <li className="stolenBases">{split.stat.stolenBases}</li>
-                      <li className="stolenBasePercentage">
-                        {split.stat.gamesPlayed}
-                      </li>
-                      <li className="groundIntoDoublePlay">
-                        {split.stat.groundIntoDoublePlay}
-                      </li>
-                      <li className="numberOfPitches">
-                        {split.stat.numberOfPitches}
-                      </li>
                       <li className="plateAppearances">
                         {split.stat.plateAppearances}
                       </li>
-                      <li className="totalBases">{split.stat.totalBases}</li>
+                      <li className="atBats">{split.stat.atBats}</li>
+                      <li className="runs">{split.stat.runs}</li>
+                      <li className="hits">{split.stat.hits}</li>
+                      <li className="doubles">{split.stat.doubles}</li>
+                      <li className="triples">{split.stat.triples}</li>
+                      <li className="homeRuns">{split.stat.homeRuns}</li>
                       <li className="rbi">{split.stat.rbi}</li>
-                      <li className="leftOnBase">{split.stat.leftOnBase}</li>
+                      <li className="stolenBases">{split.stat.stolenBases}</li>
+                      <li className="caughtStealing">
+                        {split.stat.caughtStealing}
+                      </li>
+                      <li className="stolenBasePercentage">
+                        {split.stat.gamesPlayed}
+                      </li>
+                      <li className="baseOnBalls">{split.stat.baseOnBalls}</li>
+                      <li className="strikeOuts">{split.stat.strikeOuts}</li>
+                      <li className="airOuts">{split.stat.airOuts}</li>
+                      <li className="groundOuts">{split.stat.groundOuts}</li>
+                      <li className="avg">{split.stat.avg}</li>
+                      <li className="babip">{split.stat.babip}</li>
+                      <li className="obp">{split.stat.obp}</li>
+                      <li className="slg">{split.stat.slg}</li>
+                      <li className="groundIntoDoublePlay">
+                        {split.stat.groundIntoDoublePlay}
+                      </li>
                       <li className="sacBunts">{split.stat.sacBunts}</li>
                       <li className="sacFlies">{split.stat.sacFlies}</li>
-                      <li className="babip">{split.stat.babip}</li>
-                      <li className="groudOutsToAirouts">
-                        {split.stat.groudOutsToAirouts}
-                      </li>
-                      <li className="atBatsPerHomeRun">
-                        {split.stat.atBatsPerHomeRun}
-                      </li>
                     </ul>
                   </li>
                 );

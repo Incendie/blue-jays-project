@@ -13,9 +13,11 @@
 .player {
   display: flex;
   flex-direction: row;
+  min-height: 30px;
+  margin: 10px 0;
 }
 
-.player__info {
+.player__name {
   width: 120px;
   display: flex;
   flex-direction: row;
@@ -26,15 +28,23 @@
   width: 95%;
 }
 
-.pitcher__headings {
+.pitcher__headings,
+.batter__headings {
   margin-left: 135px;
+  text-align: center;
 }
 
 .player__stats--year {
   margin-left: 20px;
+  text-align: right;
+
+  li {
+    margin-bottom: 5px;
+  }
 }
 
 .pitcher__headings,
+.batter__headings,
 .player__stats--year {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));

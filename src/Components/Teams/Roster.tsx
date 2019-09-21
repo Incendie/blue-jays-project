@@ -71,7 +71,7 @@ class Roster extends React.Component<any> {
                   className="player"
                   key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}
                 >
-                  <div className="player__info">
+                  <div className="player__name">
                     <p className="jersey">{pitcher.jerseyNumber}</p>
                     <Link to={"/player/" + pitcher.person.id}>
                       {pitcher.person.fullName}
@@ -83,14 +83,44 @@ class Roster extends React.Component<any> {
             })}
           </ul>
           <p className="tableTitle__batters">Batters</p>
+          <ul className="batter__headings">
+            <li className="gamesPlayed">GP</li>
+            <li className="plateAppearances">PA</li>
+            <li className="atBats">AB</li>
+            <li className="runs">R</li>
+            <li className="hits">H</li>
+            <li className="doubles">2B</li>
+            <li className="triples">3B</li>
+            <li className="homeRuns">HR</li>
+            <li className="rbi">RBI</li>
+            <li className="stolenBases">SB</li>
+            <li className="caughtStealing">CS</li>
+            <li className="stolenBasePercentage">SB%</li>
+            <li className="baseOnBalls">BB</li>
+            <li className="strikeOuts">SO</li>
+            <li className="airOuts">AO</li>
+            <li className="groundOuts">GO</li>
+            <li className="avg">BA</li>
+            <li className="babip">BABIP</li>
+            <li className="obp">OBP</li>
+            <li className="slg">SLG</li>
+            <li className="groundIntoDoublePlay">GIDP</li>
+            <li className="sacBunts">SH</li>
+            <li className="sacFlies">SF</li>
+          </ul>
           <ul className="batters">
             {batters.map((batter: any) => {
               return (
-                <li key={batter.parentTeamId + "_" + batter.jerseyNumber}>
-                  <p className="jersey">{batter.jerseyNumber}</p>
-                  <Link to={"/player/" + batter.person.id}>
-                    {batter.person.fullName}
-                  </Link>
+                <li
+                  className="player"
+                  key={batter.parentTeamId + "_" + batter.jerseyNumber}
+                >
+                  <div className="player__name">
+                    <p className="jersey">{batter.jerseyNumber}</p>
+                    <Link to={"/player/" + batter.person.id}>
+                      {batter.person.fullName}
+                    </Link>
+                  </div>
                   <RosterStats playerType="batter" player={batter} />
                 </li>
               );
