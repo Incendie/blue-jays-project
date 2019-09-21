@@ -31,6 +31,7 @@ class Roster extends React.Component<any> {
         <section>
           <p className="tableTitle__pitchers">Pitchers</p>
           <ul className="pitcher__headings">
+            <li className="year">Year</li>
             <li className="wins">W</li>
             <li className="losses">L</li>
             <li className="winPercentage">W-L%</li>
@@ -66,11 +67,16 @@ class Roster extends React.Component<any> {
           <ul className="pitchers">
             {pitchers.map((pitcher: any) => {
               return (
-                <li key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}>
-                  <p className="jersey">{pitcher.jerseyNumber}</p>
-                  <Link to={"/player/" + pitcher.person.id}>
-                    {pitcher.person.fullName}
-                  </Link>
+                <li
+                  className="player"
+                  key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}
+                >
+                  <div className="player__info">
+                    <p className="jersey">{pitcher.jerseyNumber}</p>
+                    <Link to={"/player/" + pitcher.person.id}>
+                      {pitcher.person.fullName}
+                    </Link>
+                  </div>
                   <RosterStats playerType="pitcher" player={pitcher} />
                 </li>
               );

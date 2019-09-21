@@ -11,11 +11,8 @@ const RosterStats: React.FC<any> = (props: any) => {
               if (props.playerType === "pitcher") {
                 return (
                   <li key={split.season + "__" + split.team.id}>
-                    <ul
-                      className={
-                        split.season + "stats " + "player__stats--year"
-                      }
-                    >
+                    <ul className={split.season + "stats player__stats--year"}>
+                      <li className="year">{split.season}</li>
                       <li className="wins">{split.stat.wins}</li>
                       <li className="losses">{split.stat.losses}</li>
                       <li className="winPercentage">
@@ -81,7 +78,7 @@ const RosterStats: React.FC<any> = (props: any) => {
               } else if (props.playerType === "batter") {
                 return (
                   <li key={split.season + "__" + split.team.id}>
-                    <ul className={split.season + "stats"}>
+                    <ul className={split.season + "stats player__stats--year"}>
                       <li className="gamesPlayed">{split.stat.gamesPlayed}</li>
                       <li className="groundOuts">{split.stat.groundOuts}</li>
                       <li className="airOuts">{split.stat.airOuts}</li>
@@ -135,7 +132,7 @@ const RosterStats: React.FC<any> = (props: any) => {
                 return <li>Fetching player stats ...</li>;
               }
             } else {
-              return <li>Fetching player splits ...</li>;
+              return;
             }
           })}
         </ul>

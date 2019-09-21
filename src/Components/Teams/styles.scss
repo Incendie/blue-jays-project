@@ -10,9 +10,37 @@
   width: 400px;
 }
 
+.player {
+  display: flex;
+  flex-direction: row;
+}
+
+.player__info {
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.player__stats {
+  width: 95%;
+}
+
+.pitcher__headings {
+  margin-left: 135px;
+}
+
+.player__stats--year {
+  margin-left: 20px;
+}
+
 .pitcher__headings,
 .player__stats--year {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   height: auto;
+}
+
+.year {
+  min-width: 40px;
 }
