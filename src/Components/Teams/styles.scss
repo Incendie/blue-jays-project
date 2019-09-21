@@ -22,6 +22,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  input[type="radio"] {
+    display: none;
+  }
 }
 
 .player__stats {

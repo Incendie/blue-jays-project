@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { fetchRoster } from "../../Actions/fetchActions";
 
 import RosterStats from "./RosterStats";
+import Player from "../Players/Player";
 
 const { connect } = require("react-redux");
 @connect((store: any) => {
@@ -65,22 +66,43 @@ class Roster extends React.Component<any> {
             <li className="homeRunsPer9">HR/9</li>
           </ul>
           <ul className="pitchers">
-            {pitchers.map((pitcher: any) => {
-              return (
-                <li
-                  className="player"
-                  key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}
-                >
-                  <div className="player__name">
-                    <p className="jersey">{pitcher.jerseyNumber}</p>
-                    <Link to={"/player/" + pitcher.person.id}>
+            <form>
+              {pitchers.map((pitcher: any) => {
+                return (
+                  <li
+                    className="player"
+                    key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}
+                  >
+                    <div className="player__name">
+                      <p className="jersey">{pitcher.jerseyNumber}</p>
+                      {/* <Link to={"/player/" + pitcher.person.id}>
                       {pitcher.person.fullName}
-                    </Link>
-                  </div>
-                  <RosterStats playerType="pitcher" player={pitcher} />
-                </li>
-              );
-            })}
+                    </Link> */}
+                      <label
+                        htmlFor={
+                          pitcher.person.firstName +
+                          pitcher.person.lastName +
+                          "Toggle"
+                        }
+                        className="name"
+                      >
+                        {pitcher.person.fullName}
+                      </label>
+                      <input
+                        type="radio"
+                        id={
+                          pitcher.person.firstName +
+                          pitcher.person.lastName +
+                          "Toggle"
+                        }
+                        name="player__name"
+                      />
+                    </div>
+                    <RosterStats playerType="pitcher" player={pitcher} />
+                  </li>
+                );
+              })}
+            </form>
           </ul>
           <p className="tableTitle__batters">Batters</p>
           <ul className="batter__headings">

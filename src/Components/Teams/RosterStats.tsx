@@ -7,7 +7,6 @@ const RosterStats: React.FC<any> = (props: any) => {
         <ul key={"stats__" + player.id}>
           {stat.splits.map((split: any) => {
             if (split.team) {
-              console.log(props.playerType, split);
               if (props.playerType === "pitcher") {
                 return (
                   <li key={split.season + "__" + split.team.id}>
