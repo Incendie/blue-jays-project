@@ -116,7 +116,7 @@ const RosterStats: React.FC<any> = (props: any) => {
                 return <li>Fetching player stats ...</li>;
               }
             } else {
-              return;
+              return <div>Fetching player page</div>;
             }
           })}
         </ul>

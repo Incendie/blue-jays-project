@@ -7,7 +7,7 @@ import store from "./store";
 
 import Main from "./Components/Main";
 import Team from "./Components/Teams/Team";
-import Player from "./Components/Players/Player";
+import PlayerStats from "./Components/Players/PlayerStats";
 
 const App: React.FC<any> = () => {
   return (
@@ -16,7 +16,7 @@ const App: React.FC<any> = () => {
         <Router>
           <Route exact path="/" component={Main} />
           <Route path="/team/:teamid" component={Team} />
-          <Route path="/player/:playerid" component={Player} />
+          <Route path="/player/:playerid" component={PlayerStats} />
         </Router>
       </main>
     </Provider>

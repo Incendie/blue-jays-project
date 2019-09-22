@@ -43,6 +43,15 @@ const initialState = {
         };
       case "FETCH_PLAYER_PENDING":
         return { ...state, fetched: false, fetching: true };
+      case "FETCH_PLAYER_STATS_FULFILLED":
+        return {
+          ...state,
+          fetched: true,
+          fetching: false,
+          player: action.payload
+        };
+      case "FETCH_PLAYER_STATS_PENDING":
+        return { ...state, fetched: false, fetching: true };
       default:
         return state;
     }

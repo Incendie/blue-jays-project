@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { fetchRoster } from "../../Actions/fetchActions";
 
@@ -39,6 +38,7 @@ class Roster extends React.Component<any, any> {
         } else {
           batters.push(player);
         }
+        return true;
       });
       return (
         <section>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const Player: React.FC<any> = (props: any) => {
-  console.log(props.player);
   const player = props.player.person
     ? props.player.person
     : {
