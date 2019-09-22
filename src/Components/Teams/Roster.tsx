@@ -34,7 +34,7 @@ class Roster extends React.Component<any, any> {
       this.state.focusPlayer.person.fullName.replace(/\s/g, "") + "Toggle"
     ) as HTMLInputElement;
     this.setState({ show: false });
-    checkedButton.checked = false;
+    // checkedButton.checked = false;
   }
 
   render() {
@@ -50,7 +50,8 @@ class Roster extends React.Component<any, any> {
         return true;
       });
       return (
-        <section>
+        <section className="team__roster">
+          <h2>Click on any player's name to see some more info</h2>
           <h3 className="tableTitle__pitchers">Pitchers</h3>
           <ul className="pitcher__headings">
             <li className="year">Year</li>

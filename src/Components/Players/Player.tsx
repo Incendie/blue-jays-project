@@ -30,7 +30,7 @@ const Player: React.FC<any> = (props: any) => {
       };
   console.log({ player });
   return (
-    <main className={"playerBio " + (props.show ? "show" : "")}>
+    <section className={"playerBio " + (props.show ? "show" : "")}>
       <div className="close" onClick={props.close}>
         <span className="forwardSlash"></span>
         <span className="backslash"></span>
@@ -72,7 +72,7 @@ const Player: React.FC<any> = (props: any) => {
         <p>{"Throws: " + player.pitchHand.description}</p>
       </div>
       <Link to={"/player/" + player.id}>Go To Profile</Link>
-    </main>
+    </section>
   );
 };
 

@@ -1,5 +1,12 @@
-h3 {
-  margin: 20px 0;
+.team__roster {
+  h2 {
+    font-size: 1.6rem;
+    text-transform: none;
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
 }
 
 .player {
@@ -15,15 +22,22 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
   &,
   & * {
     cursor: pointer;
   }
 
+  &:hover {
+    & label {
+      color: $blue;
+      font-weight: 700;
+    }
+  }
+
   .jersey {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   input[type="radio"] {
@@ -46,6 +60,7 @@ h3 {
   li:first-child {
     li {
       border-top: 1px solid black;
+      text-align: right;
     }
   }
 }
@@ -53,7 +68,7 @@ h3 {
 .pitcher__headings,
 .batter__headings,
 .fielder__headings {
-  margin-left: 158px;
+  margin-left: 153px;
   text-align: center;
 
   li {
@@ -70,13 +85,13 @@ h3 {
 }
 
 .player__stats--year {
-  margin-left: 20px;
+  margin-left: 15px;
   text-align: right;
 
   li {
     border: 1px solid black;
     border-right: none;
-    padding-right: 5px;
+    padding-right: 2px;
     font-size: 1.3rem;
 
     &:last-child {

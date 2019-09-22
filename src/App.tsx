@@ -13,13 +13,13 @@ import PlayerStats from "./Components/Players/PlayerStats";
 const App: React.FC<any> = () => {
   return (
     <Provider store={store}>
-      <main className="wrapper">
+      <div className="wrapper">
         <Router>
           <Route exact path="/" component={Main} />
           <Route path="/team/:teamid" component={Team} />
           <Route path="/player/:playerid" component={PlayerStats} />
         </Router>
-      </main>
+      </div>
     </Provider>
   );
 };

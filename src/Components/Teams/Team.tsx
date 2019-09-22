@@ -19,7 +19,7 @@ class Team extends React.Component<any> {
     if (this.props.team) {
       const teamData = this.props.team[0];
       return (
-        <section>
+        <section className="team">
           <div className="team__info">
             <h2 className="team__name">{teamData.name}</h2>
             <div className="team__logo">

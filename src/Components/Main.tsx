@@ -39,9 +39,9 @@ export default class Main extends React.Component<Props, State> {
 
   public render() {
     return (
-      <div>
+      <main>
         <h1>Welcome!</h1>
-        <h3>Click on a team to see team information.</h3>
+        <h3>Click on a team to see team information</h3>
         {/* <form onSubmit={this.onSubmit} action="submit">
           <input type="text" onChange={this.onChange} />
           <button type="button" onClick={this.onSubmit}>
@@ -61,7 +61,7 @@ export default class Main extends React.Component<Props, State> {
           <div className="nl__central">NL Central</div>
         </div>
         <Teams />
-      </div>
+      </main>
     );
   }
 }
