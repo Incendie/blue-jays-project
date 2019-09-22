@@ -1,0 +1,85 @@
+#teams ul {
+  display: grid;
+  grid-template-columns: calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-auto-flow: column;
+
+  li {
+    height: 100%;
+  }
+}
+
+.leagues,
+.divisions {
+  display: grid;
+  text-align: center;
+
+
+  div {
+    border: 1px solid black;
+  }
+}
+
+.leagues {
+  grid-template-columns: 50% 50%;
+  font-size: 3rem;
+
+  div {
+    border-bottom: none;
+
+    &.leagues__american {
+      border-right: none;
+      background: adjust-color($blue, $alpha: -0.5);
+    }
+
+    &.leagues__national {
+      background: adjust-color($red, $alpha: -0.5);
+    }
+  }
+}
+
+.divisions {
+  grid-template-columns: calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);
+  font-size: 2rem;
+
+  div {
+    border-right: none;
+  }
+
+  & .nl__central {
+    border-right: 1px solid black;
+  }
+}
+
+.teamList__team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+  border: 1px solid black;
+  border-top: none;
+  border-right: none;
+}
+
+.nationalleaguecentral {
+  border-right: 1px solid black;
+}
+
+.teamList__logo {
+  min-width: 100px;
+
+  img {
+    max-height: 80px
+  }
+}
+
+.teamList__name {
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+
+.team__logo {
+  width: 80px;
+}

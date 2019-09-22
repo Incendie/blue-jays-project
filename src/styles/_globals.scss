@@ -19,13 +19,12 @@ h3 {
 
 h1 {
   text-transform: none;
-  color: white;
   font-size: 7.8rem;
   font-weight: 800;
   letter-spacing: 0.78px;
-  max-width: 500px;
   max-height: 150px;
   line-height: 1.03;
+  text-align: center;
 }
 
 h2 {
@@ -38,7 +37,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 5px;
   text-transform: uppercase;
   font-weight: 800;
@@ -90,7 +89,7 @@ button:active,
 .filterButton:focus,
 .filterButton:active {
   border: none;
-  background: $primaryColour;
+  // background: $primaryColour;
   outline: none;
   padding: 0;
 }
@@ -116,7 +115,7 @@ button,
     height: $buttonSize;
     width: $buttonSize;
     content: "";
-    background: $primaryColour;
+    // background: $primaryColour;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -137,26 +136,26 @@ button,
 
   &:hover,
   &:active {
-    color: $primaryColour;
-    background-color: $bgColour;
-    border-top: 1px solid $primaryColour;
-    border-bottom: 1px solid $primaryColour;
+    // color: $primaryColour;
+    // background-color: $bgColour;
+    // border-top: 1px solid $primaryColour;
+    // border-bottom: 1px solid $primaryColour;
     height: $buttonSize;
 
     &:before,
     &:after {
-      background-color: $bgColour;
-      border-top: 1px solid $primaryColour;
-      border-bottom: 1px solid $primaryColour;
+      // background-color: $bgColour;
+      // border-top: 1px solid $primaryColour;
+      // border-bottom: 1px solid $primaryColour;
       top: -1px;
     }
 
     &:before {
-      border-left: 1px solid $primaryColour;
+      // border-left: 1px solid $primaryColour;
     }
 
     &:after {
-      border-right: 1px solid $primaryColour;
+      // border-right: 1px solid $primaryColour;
     }
   }
 

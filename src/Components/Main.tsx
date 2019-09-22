@@ -4,6 +4,8 @@ import Teams from "./Teams/Teams";
 
 import { filterSubmitted } from "../Actions/filterActions";
 
+import "../styles/index.scss";
+
 const { connect } = require("react-redux");
 
 interface Props {
@@ -40,13 +42,25 @@ export default class Main extends React.Component<Props, State> {
     return (
       <div>
         <h1>Welcome!</h1>
-        <p>What are you looking for today?</p>
-        <form onSubmit={this.onSubmit} action="submit">
+        <h3>Click on a team to see team information.</h3>
+        {/* <form onSubmit={this.onSubmit} action="submit">
           <input type="text" onChange={this.onChange} />
           <button type="button" onClick={this.onSubmit}>
             Search
           </button>
-        </form>
+        </form> */}
+        <div className="leagues">
+          <div className="leagues__american">American League</div>
+          <div className="leagues__national">National League</div>
+        </div>
+        <div className="divisions">
+          <div className="al__west">AL West</div>
+          <div className="al__east">AL East</div>
+          <div className="al__central">AL Central</div>
+          <div className="nl__west">NL West</div>
+          <div className="nl__east">NL East</div>
+          <div className="nl__central">NL Central</div>
+        </div>
         <Teams />
       </div>
     );
