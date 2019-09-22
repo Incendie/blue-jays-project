@@ -12,9 +12,21 @@ const { connect } = require("react-redux");
     roster: store.fetch.roster.roster
   };
 })
-class Roster extends React.Component<any> {
+class Roster extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = { focusPlayer: {} };
+
+    this.onChange = this.onChange.bind(this);
+  }
   componentDidMount() {
     this.props.dispatch(fetchRoster(this.props.teamid));
+  }
+
+  onChange(e: any, player: any) {
+    if (e.currentTarget.checked) {
+      this.setState({ focusPlayer: player });
+    }
   }
 
   render() {
@@ -75,9 +87,6 @@ class Roster extends React.Component<any> {
                   >
                     <div className="player__name">
                       <p className="jersey">{pitcher.jerseyNumber}</p>
-                      {/* <Link to={"/player/" + pitcher.person.id}>
-                      {pitcher.person.fullName}
-                    </Link> */}
                       <label
                         htmlFor={
                           pitcher.person.firstName +
@@ -96,6 +105,7 @@ class Roster extends React.Component<any> {
                           "Toggle"
                         }
                         name="player__name"
+                        onChange={e => this.onChange(e, pitcher)}
                       />
                     </div>
                     <RosterStats playerType="pitcher" player={pitcher} />
@@ -139,15 +149,33 @@ class Roster extends React.Component<any> {
                 >
                   <div className="player__name">
                     <p className="jersey">{batter.jerseyNumber}</p>
-                    <Link to={"/player/" + batter.person.id}>
+                    <label
+                      htmlFor={
+                        batter.person.firstName +
+                        batter.person.lastName +
+                        "Toggle"
+                      }
+                      className="name"
+                    >
                       {batter.person.fullName}
-                    </Link>
+                    </label>
+                    <input
+                      type="radio"
+                      id={
+                        batter.person.firstName +
+                        batter.person.lastName +
+                        "Toggle"
+                      }
+                      name="player__name"
+                      onChange={e => this.onChange(e, batter)}
+                    />
                   </div>
                   <RosterStats playerType="batter" player={batter} />
                 </li>
               );
             })}
           </ul>
+          <Player player={this.state.focusPlayer} />
         </section>
       );
     } else {
