@@ -22,6 +22,17 @@
     }
   }
 
+  .player__stats--year {
+    li {
+      border-bottom: none;
+
+    }
+
+    &:last-child li {
+      border-bottom: 1px solid black;
+    }
+  }
+
   .detail__info {
     display: flex;
     margin: 0 auto;

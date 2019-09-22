@@ -124,15 +124,15 @@ class PlayerStats extends React.Component<any, any> {
                 <h3>Fielding</h3>
                 <ul className="fielder__headings">
                   <li className="year">Year</li>
-                  <li className="assists">A</li>
-                  <li className="chances">OPP</li>
-                  <li className="doublePlays">DP</li>
-                  <li className="errors">E</li>
-                  <li className="fielding">FPCT</li>
                   <li className="games">G</li>
                   <li className="gamesStarted">GS</li>
                   <li className="innings">INN</li>
+                  <li className="chances">OPP</li>
                   <li className="putOuts">PO</li>
+                  <li className="assists">A</li>
+                  <li className="errors">E</li>
+                  <li className="doublePlays">DP</li>
+                  <li className="fielding">FPCT</li>
                   <li className="rangeFactorPerGame">RF</li>
                 </ul>
                 <Splits statType="fielding" stats={stats.fielding} />

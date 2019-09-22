@@ -97,15 +97,15 @@ const Splits: React.FC<any> = (props: any) => {
             className={split.season + "stats player__stats--year"}
           >
             <li className="year">{split.season}</li>
-            <li className="assists">{split.stat.asssists}</li>
-            <li className="chances">{split.stat.chances}</li>
-            <li className="doublePlays">{split.stat.doublePlays}</li>
-            <li className="errors">{split.stat.errors}</li>
-            <li className="fielding">{split.stat.fielding}</li>
             <li className="games">{split.stat.games}</li>
             <li className="gamesStarted">{split.stat.gamesStarted}</li>
             <li className="innings">{split.stat.innings}</li>
+            <li className="chances">{split.stat.chances}</li>
             <li className="putOuts">{split.stat.putOuts}</li>
+            <li className="assists">{split.stat.asssists}</li>
+            <li className="errors">{split.stat.errors}</li>
+            <li className="doublePlays">{split.stat.doublePlays}</li>
+            <li className="fielding">{split.stat.fielding}</li>
             <li className="rangeFactorPerGame">
               {split.stat.rangeFactorPerGame}
             </li>
