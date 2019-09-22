@@ -94,6 +94,7 @@ const Splits: React.FC<any> = (props: any) => {
             key={split.season + "fielding"}
             className={split.season + "stats player__stats--year"}
           >
+            <li className="year">{split.season}</li>
             <li className="asssists">{split.stat.asssists}</li>
             <li className="chances">{split.stat.chances}</li>
             <li className="doublePlays">{split.stat.doublePlays}</li>
