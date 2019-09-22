@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/index.scss";
 
 const Splits: React.FC<any> = (props: any) => {
+  console.log("props", props);
   const stats = props.stats[0];
   switch (props.statType) {
     case "hitting":
@@ -96,7 +97,7 @@ const Splits: React.FC<any> = (props: any) => {
             className={split.season + "stats player__stats--year"}
           >
             <li className="year">{split.season}</li>
-            <li className="asssists">{split.stat.asssists}</li>
+            <li className="assists">{split.stat.asssists}</li>
             <li className="chances">{split.stat.chances}</li>
             <li className="doublePlays">{split.stat.doublePlays}</li>
             <li className="errors">{split.stat.errors}</li>

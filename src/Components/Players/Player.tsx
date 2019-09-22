@@ -28,6 +28,7 @@ const Player: React.FC<any> = (props: any) => {
         },
         id: 0
       };
+  console.log({ player });
   return (
     <main className={"playerBio " + (props.show ? "show" : "")}>
       <div className="close" onClick={props.close}>
@@ -45,7 +46,9 @@ const Player: React.FC<any> = (props: any) => {
         />
       </div>
       <div className="player__info">
-        <p>{player.fullName}</p>
+        <p>
+          #{player.primaryNumber} {player.fullName}
+        </p>
         <p>{"Age: " + player.currentAge}</p>
         <p>{"Birth Date: " + player.birthDate}</p>
         <p>{"Born: " + player.birthCity + ", " + player.birthStateProvince}</p>

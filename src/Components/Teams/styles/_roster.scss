@@ -51,7 +51,8 @@ h3 {
 }
 
 .pitcher__headings,
-.batter__headings {
+.batter__headings,
+.fielder__headings {
   margin-left: 158px;
   text-align: center;
 
@@ -85,6 +86,7 @@ h3 {
 
 .pitcher__headings,
 .batter__headings,
+.fielder__headings,
 .player__stats--year {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
