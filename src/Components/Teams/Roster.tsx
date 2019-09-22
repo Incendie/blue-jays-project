@@ -14,9 +14,10 @@ const { connect } = require("react-redux");
 class Roster extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
-    this.state = { focusPlayer: {} };
+    this.state = { focusPlayer: {}, show: false };
 
     this.onChange = this.onChange.bind(this);
+    this.closeOnClick = this.closeOnClick.bind(this);
   }
   componentDidMount() {
     this.props.dispatch(fetchRoster(this.props.teamid));
@@ -24,8 +25,16 @@ class Roster extends React.Component<any, any> {
 
   onChange(e: any, player: any) {
     if (e.currentTarget.checked) {
-      this.setState({ focusPlayer: player });
+      this.setState({ focusPlayer: player, show: true });
     }
+  }
+
+  closeOnClick(e: any) {
+    let checkedButton = document.getElementById(
+      this.state.focusPlayer.person.fullName.replace(/\s/g, "") + "Toggle"
+    ) as HTMLInputElement;
+    this.setState({ show: false });
+    checkedButton.checked = false;
   }
 
   render() {
@@ -176,7 +185,11 @@ class Roster extends React.Component<any, any> {
               );
             })}
           </ul>
-          <Player player={this.state.focusPlayer} />
+          <Player
+            player={this.state.focusPlayer}
+            show={this.state.show}
+            close={this.closeOnClick}
+          />
         </section>
       );
     } else {

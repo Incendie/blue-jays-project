@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./styles.scss";
 
 const Player: React.FC<any> = (props: any) => {
   const player = props.player.person
@@ -27,7 +29,11 @@ const Player: React.FC<any> = (props: any) => {
         id: 0
       };
   return (
-    <main>
+    <main className={"playerBio " + (props.show ? "show" : "")}>
+      <div className="close" onClick={props.close}>
+        <span className="forwardSlash"></span>
+        <span className="backslash"></span>
+      </div>
       <div className="player__photo">
         <img
           src={
@@ -39,7 +45,7 @@ const Player: React.FC<any> = (props: any) => {
         />
       </div>
       <div className="player__info">
-        <p>{"Name: " + player.fullName}</p>
+        <p>{player.fullName}</p>
         <p>{"Age: " + player.currentAge}</p>
         <p>{"Birth Date: " + player.birthDate}</p>
         <p>{"Born: " + player.birthCity + ", " + player.birthStateProvince}</p>
@@ -62,6 +68,7 @@ const Player: React.FC<any> = (props: any) => {
         <p>{"Bats: " + player.batSide.description}</p>
         <p>{"Throws: " + player.pitchHand.description}</p>
       </div>
+      <Link to={"/player/" + player.id}>Go To Profile</Link>
     </main>
   );
 };

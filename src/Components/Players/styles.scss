@@ -1,0 +1,62 @@
+@import "../../styles/index.scss";
+
+.playerBio {
+  position: fixed;
+  background: adjust-color($blue, $alpha: -0.7);
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 40px;
+  height: 100vh;
+  box-shadow: 1px 1px 10px black;
+
+  &.show {
+    transform: translateX(0%);
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+}
+
+.player__photo {
+  min-height: 320px;
+}
+
+.player__info {
+  p:first-child {
+    font-size: 2.6rem;
+    margin: 10px 0;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  span {
+    height: 2px;
+    background: black;
+    width: 25px;
+    z-index: 1000;
+    position: absolute;
+    vertical-align: middle;
+    left: -2px;
+    top: 50%;
+
+    &.forwardSlash {
+      transform: rotate(45deg);
+    }
+
+    &.backslash {
+      transform: rotate(135deg);
+    }
+  }
+}
