@@ -1,0 +1,21 @@
+.team__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team__logo {
+  width: 100px;
+  order: -1;
+
+  img {
+    max-height: 80px;
+  }
+}
+
+.team__park {
+  width: 100%;
+
+  img {
+    max-width: 25%
+  }
+}

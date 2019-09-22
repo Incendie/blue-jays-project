@@ -1,0 +1,91 @@
+h3 {
+  margin: 20px 0;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  min-height: 30px;
+  margin: 10px 0;
+}
+
+.player__name {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+
+  &,
+  & * {
+    cursor: pointer;
+  }
+
+  .jersey {
+    font-size: 2rem;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.player__stats {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  li {
+    li {
+      border-top: none;
+    }
+  }
+
+  li:first-child {
+    li {
+      border-top: 1px solid black;
+    }
+  }
+}
+
+.pitcher__headings,
+.batter__headings {
+  margin-left: 158px;
+  text-align: center;
+
+  li {
+    background: adjust-color($blue, $alpha: -0.7);
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 1px solid black;
+    border-right: none;
+
+    &:last-child {
+      border-right: 1px solid black;
+    }
+  }
+}
+
+.player__stats--year {
+  margin-left: 20px;
+  text-align: right;
+
+  li {
+    border: 1px solid black;
+    border-right: none;
+    padding-right: 5px;
+
+    &:last-child {
+      border-right: 1px solid black;
+    }
+  }
+}
+
+.pitcher__headings,
+.batter__headings,
+.player__stats--year {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+}

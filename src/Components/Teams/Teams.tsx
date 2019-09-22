@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./styles/index.scss";
+
 import { fetchTeams } from "../../Actions/fetchActions";
-import "./styles.scss";
 
 const { connect } = require("react-redux");
 @connect((store: any) => {
@@ -20,14 +21,13 @@ export default class Teams extends React.Component<any> {
     let teamNames,
       toFilter = this.props.filtered;
     if (this.props.fetch.teams) {
-      teamNames = this.props.fetch.teams.map((team: any, i: number) => {
+      teamNames = this.props.fetch.teams.map((team: any) => {
         if (
           team.name.toLowerCase().includes(toFilter.target) ||
           !toFilter.target
         ) {
           const orderStyle = {
-            order:
-              team.league.id.toString() + team.division.id.toString() + (i % 5)
+            order: team.league.id.toString() + team.division.id.toString()
           };
           return (
             <li

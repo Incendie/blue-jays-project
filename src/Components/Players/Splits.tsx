@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/index.scss";
 
 const Splits: React.FC<any> = (props: any) => {
   const stats = props.stats[0];

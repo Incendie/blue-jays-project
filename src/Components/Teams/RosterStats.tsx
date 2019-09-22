@@ -4,7 +4,7 @@ const RosterStats: React.FC<any> = (props: any) => {
   const player = props.player,
     stats = player.person.stats.map((stat: any) => {
       return (
-        <ul key={"stats__" + player.id}>
+        <ul className="player__stats" key={"stats__" + player.id}>
           {stat.splits.map((split: any) => {
             if (split.team) {
               if (props.playerType === "pitcher") {
@@ -78,6 +78,7 @@ const RosterStats: React.FC<any> = (props: any) => {
                 return (
                   <li key={split.season + "__" + split.team.id}>
                     <ul className={split.season + "stats player__stats--year"}>
+                      <li className="year">{split.season}</li>
                       <li className="gamesPlayed">{split.stat.gamesPlayed}</li>
                       <li className="plateAppearances">
                         {split.stat.plateAppearances}
@@ -113,17 +114,21 @@ const RosterStats: React.FC<any> = (props: any) => {
                   </li>
                 );
               } else {
-                return <li>Fetching player stats ...</li>;
+                return (
+                  <li key={split.season + "__" + split.team.id}>
+                    Fetching player stats ...
+                  </li>
+                );
               }
             } else {
-              return <div>Fetching player page</div>;
+              return false;
             }
           })}
         </ul>
       );
     });
 
-  return <ul className="player__stats">{stats}</ul>;
+  return stats;
 };
 
 export default RosterStats;

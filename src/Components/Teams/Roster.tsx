@@ -42,7 +42,7 @@ class Roster extends React.Component<any, any> {
       });
       return (
         <section>
-          <p className="tableTitle__pitchers">Pitchers</p>
+          <h3 className="tableTitle__pitchers">Pitchers</h3>
           <ul className="pitcher__headings">
             <li className="year">Year</li>
             <li className="wins">W</li>
@@ -114,8 +114,9 @@ class Roster extends React.Component<any, any> {
               })}
             </form>
           </ul>
-          <p className="tableTitle__batters">Batters</p>
+          <h3 className="tableTitle__batters">Batters</h3>
           <ul className="batter__headings">
+            <li className="year">Year</li>
             <li className="gamesPlayed">GP</li>
             <li className="plateAppearances">PA</li>
             <li className="atBats">AB</li>

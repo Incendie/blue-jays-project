@@ -4,6 +4,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import "./styles/index.scss";
 
 import Main from "./Components/Main";
 import Team from "./Components/Teams/Team";
