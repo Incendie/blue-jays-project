@@ -39,7 +39,8 @@
   }
 
   .playerBio {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     position: static;
     background: none;
     box-shadow: none;
@@ -50,6 +51,22 @@
     a {
       display: none;
     }
+
+    & div {
+      margin-top: 100px;
+      margin-left: 20px;
+      width: 20%;
+
+      p {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .player__photo {
+      width: 20%;
+      margin-left: 0;
+    }
   }
 
   .player__info p:first-child {
@@ -58,10 +75,6 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .player__photo {
-    margin-top: 100px;
   }
 
   .close {

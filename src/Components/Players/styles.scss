@@ -2,7 +2,7 @@
 
 .playerBio {
   position: fixed;
-  background: adjust-color($blue, $alpha: -0.7);
+  background: adjust-color($blue, $lightness: 60);
   right: 0;
   top: 0;
   transform: translateX(100%);
@@ -19,6 +19,22 @@
     font-size: 1.6rem;
     margin: 5px 0;
   }
+
+  a {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+    font-size: 2rem;
+
+    &:hover {
+      background: adjust-color($red, $lightness: 50);
+    }
+  }
+}
+
+.player__baseballBio {
+  margin-bottom: 40px;
 }
 
 .player__photo {
