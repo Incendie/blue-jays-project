@@ -12,6 +12,15 @@ The data required for the application can be retrieved from the MLB StatsAPI (se
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Instructions
+
+Current Node version: 10.7.0
+Current NPM version: 6.11.3
+
+1. From the terminal, run `npm install` in the root folder
+2. To serve the project, run `npm run start` in the root folder
+3. Go to http://localhost:3000 to view the project
+
 ## Available Scripts
 
 In the project directory, you can run:
