@@ -1,12 +1,14 @@
 header {
   height: 100px;
   background: $blue;
+  box-shadow: 1px 1px 5px black;
 
   .icon {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-height: 100px;
   }
 
   .logo {

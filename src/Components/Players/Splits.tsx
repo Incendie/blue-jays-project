@@ -1,7 +1,6 @@
 import React from "react";
 
 const Splits: React.FC<any> = (props: any) => {
-  console.log("props", props);
   const stats = props.stats[0];
   switch (props.statType) {
     case "hitting":

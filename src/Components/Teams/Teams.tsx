@@ -46,8 +46,8 @@ export default class Teams extends React.Component<any> {
                     alt=""
                   />
                 </div>
+                <p className="teamList__name">{team.name}</p>
               </Link>
-              <p className="teamList__name">{team.name}</p>
             </li>
           );
         } else {

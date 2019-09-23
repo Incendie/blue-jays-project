@@ -28,9 +28,20 @@
   align-items: center;
   font-size: 1.1rem;
 
+  &:hover~.player__stats {
+    ul li {
+      background: adjust-color(grey, $lightness: 40);
+    }
+  }
+
   &,
   & * {
     cursor: pointer;
+  }
+
+  label {
+    transition: all 0.3s ease-in-out;
+    color: black;
   }
 
   &:hover {
@@ -54,8 +65,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-height: 20px;
 
   li {
+    ul li {
+      transition: 0.3s ease-in-out;
+      background: white;
+    }
+
+    &:hover {
+      ul li {
+        background: adjust-color(grey, $lightness: 40);
+      }
+    }
+
     li {
       border-top: none;
     }
@@ -80,8 +103,8 @@
     font-size: 1.1rem;
     font-weight: 700;
     border: 1px solid black;
-    border-bottom: none;
     border-right: none;
+    border-bottom: none;
     padding-top: 5px;
     padding-bottom: 5px;
 

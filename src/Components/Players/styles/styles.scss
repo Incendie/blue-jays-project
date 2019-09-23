@@ -6,8 +6,9 @@
   right: 0;
   top: 0;
   transform: translateX(100%);
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s ease-in-out;
   padding: 35px;
+  min-height: 800px;
   height: 100vh;
   box-shadow: 1px 1px 10px black;
 
@@ -24,11 +25,12 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
-    background: white;
     font-size: 2rem;
+    transition: 0.3s ease-in-out;
+    background: white;
 
     &:hover {
-      background: adjust-color($red, $lightness: 50);
+      background: adjust-color(grey, $lightness: 30);
     }
   }
 }
