@@ -30,9 +30,9 @@ class Roster extends React.Component<any, any> {
   }
 
   closeOnClick(e: any) {
-    let checkedButton = document.getElementById(
-      this.state.focusPlayer.person.fullName.replace(/\s/g, "") + "Toggle"
-    ) as HTMLInputElement;
+    // let checkedButton = document.getElementById(
+    //   this.state.focusPlayer.person.fullName.replace(/\s/g, "") + "Toggle"
+    // ) as HTMLInputElement;
     this.setState({ show: false });
     // checkedButton.checked = false;
   }

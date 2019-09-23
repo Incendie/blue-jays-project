@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss";
+
+import "./styles/styles.scss";
 
 const Player: React.FC<any> = (props: any) => {
   const player = props.player.person
@@ -28,7 +29,7 @@ const Player: React.FC<any> = (props: any) => {
         },
         id: 0
       };
-  console.log({ player });
+
   return (
     <section className={"playerBio " + (props.show ? "show" : "")}>
       <div className="close" onClick={props.close}>

@@ -1,13 +1,13 @@
-@import "../../styles/index.scss";
+@import "../../../styles/variables";
 
 .playerBio {
   position: fixed;
-  background: adjust-color($blue, $lightness: 60);
+  background: adjust-color($blue, $lightness: 65);
   right: 0;
   top: 0;
   transform: translateX(100%);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  padding: 40px;
+  padding: 35px;
   height: 100vh;
   box-shadow: 1px 1px 10px black;
 

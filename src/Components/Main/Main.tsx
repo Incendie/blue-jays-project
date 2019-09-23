@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles.scss";
+import "./styles/styles.scss";
 
-import Teams from "./Teams/Teams";
+import Teams from "../Teams/Teams";
 
-import { filterSubmitted } from "../Actions/filterActions";
+import { filterSubmitted } from "../../Actions/filterActions";
 
 const { connect } = require("react-redux");
 

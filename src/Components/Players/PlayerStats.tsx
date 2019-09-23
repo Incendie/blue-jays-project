@@ -1,5 +1,5 @@
 import React from "react";
-import "./details.scss";
+import "./styles/details.scss";
 
 import { fetchPlayerStats } from "../../Actions/fetchActions";
 

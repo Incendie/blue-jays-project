@@ -1,0 +1,23 @@
+header {
+  height: 100px;
+  background: $blue;
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  .appName {
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    width: 90%;
+  }
+}
