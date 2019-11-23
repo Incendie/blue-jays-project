@@ -90,37 +90,39 @@ class Roster extends React.Component<any, any> {
           <ul className="pitchers">
             <form>
               {pitchers.map((pitcher: any) => {
-                return (
-                  <li
-                    className="player"
-                    key={pitcher.parentTeamId + "_" + pitcher.jerseyNumber}
-                  >
-                    <div className="player__name">
-                      <p className="jersey">{pitcher.jerseyNumber}</p>
-                      <label
-                        htmlFor={
-                          pitcher.person.firstName +
-                          pitcher.person.lastName +
-                          "Toggle"
-                        }
-                        className="name"
-                      >
-                        {pitcher.person.fullName}
-                      </label>
-                      <input
-                        type="radio"
-                        id={
-                          pitcher.person.firstName +
-                          pitcher.person.lastName +
-                          "Toggle"
-                        }
-                        name="player__name"
-                        onChange={e => this.onChange(e, pitcher)}
-                      />
-                    </div>
-                    <RosterStats playerType="pitcher" player={pitcher} />
-                  </li>
-                );
+                if (pitcher.jerseyNumber && pitcher.person.stats) {
+                  return (
+                    <li
+                      className="player"
+                      key={pitcher.parentTeamId + "_" + pitcher.person.id}
+                    >
+                      <div className="player__name">
+                        <p className="jersey">{pitcher.jerseyNumber}</p>
+                        <label
+                          htmlFor={
+                            pitcher.person.firstName +
+                            pitcher.person.lastName +
+                            "Toggle"
+                          }
+                          className="name"
+                        >
+                          {pitcher.person.fullName}
+                        </label>
+                        <input
+                          type="radio"
+                          id={
+                            pitcher.person.firstName +
+                            pitcher.person.lastName +
+                            "Toggle"
+                          }
+                          name="player__name"
+                          onChange={e => this.onChange(e, pitcher)}
+                        />
+                      </div>
+                      <RosterStats playerType="pitcher" player={pitcher} />
+                    </li>
+                  );
+                }
               })}
             </form>
           </ul>
@@ -153,37 +155,39 @@ class Roster extends React.Component<any, any> {
           </ul>
           <ul className="batters">
             {batters.map((batter: any) => {
-              return (
-                <li
-                  className="player"
-                  key={batter.parentTeamId + "_" + batter.jerseyNumber}
-                >
-                  <div className="player__name">
-                    <p className="jersey">{batter.jerseyNumber}</p>
-                    <label
-                      htmlFor={
-                        batter.person.firstName +
-                        batter.person.lastName +
-                        "Toggle"
-                      }
-                      className="name"
-                    >
-                      {batter.person.fullName}
-                    </label>
-                    <input
-                      type="radio"
-                      id={
-                        batter.person.firstName +
-                        batter.person.lastName +
-                        "Toggle"
-                      }
-                      name="player__name"
-                      onChange={e => this.onChange(e, batter)}
-                    />
-                  </div>
-                  <RosterStats playerType="batter" player={batter} />
-                </li>
-              );
+              if (batter.jerseyNumber && batter.person.stats) {
+                return (
+                  <li
+                    className="player"
+                    key={batter.parentTeamId + "_" + batter.jerseyNumber}
+                  >
+                    <div className="player__name">
+                      <p className="jersey">{batter.jerseyNumber}</p>
+                      <label
+                        htmlFor={
+                          batter.person.firstName +
+                          batter.person.lastName +
+                          "Toggle"
+                        }
+                        className="name"
+                      >
+                        {batter.person.fullName}
+                      </label>
+                      <input
+                        type="radio"
+                        id={
+                          batter.person.firstName +
+                          batter.person.lastName +
+                          "Toggle"
+                        }
+                        name="player__name"
+                        onChange={e => this.onChange(e, batter)}
+                      />
+                    </div>
+                    <RosterStats playerType="batter" player={batter} />
+                  </li>
+                );
+              }
             })}
           </ul>
           <Player

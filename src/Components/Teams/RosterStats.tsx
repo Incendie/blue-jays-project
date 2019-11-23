@@ -1,10 +1,11 @@
 import React from "react";
 
 const RosterStats: React.FC<any> = (props: any) => {
-  const player = props.player,
-    stats = player.person.stats.map((stat: any) => {
+  const player = props.player;
+  if (player.person.stats) {
+    const stats = player.person.stats.map((stat: any) => {
       return (
-        <ul className="player__stats" key={"stats__" + player.id}>
+        <ul className="player__stats" key={"stats__" + player.person.id}>
           {stat.splits.map((split: any) => {
             if (split.team) {
               if (props.playerType === "pitcher") {
@@ -127,8 +128,10 @@ const RosterStats: React.FC<any> = (props: any) => {
         </ul>
       );
     });
-
-  return stats;
+    return stats;
+  } else {
+    return <div>Fetching Player Stats...</div>;
+  }
 };
 
 export default RosterStats;
